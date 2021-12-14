@@ -38,6 +38,12 @@ public class ConsoleExercises {
         //  worth noting there are other methods that will return user input
         //  nextInt --> will return user input as an int
 
+        /** 1)  Copy this code into your main method: */
+        double pi = 3.14159;
+        //  per documentation, a newline should be passed like %n and not \n
+//        System.out.printf("The value of pi is approximately %s%n", pi);
+        System.out.printf("The value of pi is approximately %.2f%n", pi);
+
 
     }
 }
