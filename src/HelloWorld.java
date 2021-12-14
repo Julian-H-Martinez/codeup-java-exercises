@@ -115,11 +115,68 @@ public class HelloWorld {
 //        System.out.println(myNumber);
 
 /** 10) Copy and paste the following code blocks one at a time and execute them */
+//        int x = 5;
+//        System.out.println("post increment");
+//        System.out.println(x++);
+//        System.out.println(x);
+//
+//        int y = 5;
+//        System.out.println("pre increment");
+//        System.out.println(++y);
+//        System.out.println(y);
 
+        //  difference is that post increment won't be seen right away, it'll need to be called on to see change
+        //  whereas pre increment you would be able to see the increment upon initial call
 
+/** 11) Try to create a variable named class. What happens? */
+//        String class = "greeting";
+//  not accepted because class can't be used as a variable name because it's a reserved word
 
+/** 12) Object is the most generic type in Java. You can assign any value to a variable of type Object.
+ *      What do you think will happen when the following code is run? */
+//  it'll be accepted, maybe, hmmm
+        String theNumberThree = "three";
+        Object o = theNumberThree;
+//        int three = (int) o;
+//  Exception in thread "main" java.lang is thrown;
+//        int three = (int) "three";  //  won't be accepted because both need to be in ()
+//  java:incompatible types: java.lang.String cannot be converted to int
 
-
+/** 13) Rewrite the following expressions using the relevant shorthand assignment operators: */
+/**
+        int x = 4;
+        x = x + 5;
+ */
+//        int x = 4;
+//        x += 5;
+//        System.out.println(x);
+/**
+     int x = 3;
+     int y = 4;
+     y = y * x;
+ */
+//        int x = 3;
+//        int y = 4;
+//        y *= x;
+//        System.out.println(y);
+/**
+     int x = 10;
+     int y = 2;
+     x = x / y;
+     y = y - x;
+ */
+//        int x = 10;
+//        int y = 2;
+//        x /= y;
+//        y -= x;
+//        System.out.println(x);
+//        System.out.println(y);
+/** 14)
+ * What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold?
+ * it won't be accepted; red line will be thrown
+ * What happens if you increment a numeric variable past the type's capacity?
+ * it'll return a negative number
+ * Hint: Integer.MAX_VALUE is a class constant (we'll learn more about these later) that holds the maximum value for the int type. */
 
 
 
