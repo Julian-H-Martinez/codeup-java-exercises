@@ -44,6 +44,15 @@ public class ConsoleExercises {
 //        System.out.printf("The value of pi is approximately %s%n", pi);
         System.out.printf("The value of pi is approximately %.2f%n", pi);
 
+        /** Scanner 1)
+         * Prompt a user to enter an integer and store that value in an int variable using the nextInt method.
+         * What happens if you input something that is not an integer? --> Exception error is thrown
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an Integer: ");
+        int userInput = scanner.nextInt();
+        System.out.printf("User input is: %s", userInput);
+
 
     }
 }
