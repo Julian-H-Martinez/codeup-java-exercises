@@ -81,11 +81,12 @@ public class HelloWorld {
 /**  Create an int variable named myFavoriteNumber and assign your favorite number to it, then print it out to the console. */
         int myFavoriteNumber = 10;
         System.out.println(myFavoriteNumber);
+
+ /** Create a String variable named myString and assign a string value to it, then print the variable out to the console.*/
+        String myString = "So far so good here in JAVA world!";
+        System.out.println(myString);
+
 /**
- *
- *
- * Create a String variable named myString and assign a string value to it, then print the variable out to the console.
- *
  * Change your code to assign a character value to myString. What do you notice?
  *
  * Change your code to assign the value 3.14159 to myString. What happens?
