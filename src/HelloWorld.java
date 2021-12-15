@@ -138,8 +138,8 @@ public class HelloWorld {
         String theNumberThree = "three";
         Object o = theNumberThree;
 //        int three = (int) o;
-//  Exception in thread "main" java.lang is thrown;
-//        int three = (int) "three";  //  won't be accepted because both need to be in ()
+//  RUNTIME_ERR: Exception in thread "main" java.lang is thrown;
+//        int three = (int) "three";  //  won't be accepted because you can't assign a string to an (int)
 //  java:incompatible types: java.lang.String cannot be converted to int
 
 /** 13) Rewrite the following expressions using the relevant shorthand assignment operators: */
