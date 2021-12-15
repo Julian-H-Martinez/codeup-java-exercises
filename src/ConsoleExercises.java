@@ -42,16 +42,30 @@ public class ConsoleExercises {
         double pi = 3.14159;
         //  per documentation, a newline should be passed like %n and not \n
 //        System.out.printf("The value of pi is approximately %s%n", pi);
-        System.out.printf("The value of pi is approximately %.2f%n", pi);
+//        System.out.printf("The value of pi is approximately %.2f%n", pi);
 
         /** Scanner 1)
          * Prompt a user to enter an integer and store that value in an int variable using the nextInt method.
          * What happens if you input something that is not an integer? --> Exception error is thrown
          */
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter an Integer: ");
-        int userInput = scanner.nextInt();
-        System.out.printf("User input is: %s", userInput);
+//        System.out.print("Enter an Integer: ");
+//        int userInput = scanner.nextInt();
+//        System.out.printf("User input is: %s", userInput);
+
+        /** Scanner 2)
+         Prompt a user to enter 3 words, and store each of them in a separate variable.
+         Then, display them back in the console, each on a newline.
+
+         What happens if you enter less than 3 words? --> will not move to printing until 3rd word is entered
+         What happens if you enter more than 3 words? --> will only print first 3
+         */
+//        System.out.print("Enter 3 words");
+//        String userStrInput = scanner.next();
+//        String userStrInput2 = scanner.next();
+//        String userStrInput3 = scanner.next();
+//        System.out.printf("%s%n%s%n%s%n", userStrInput, userStrInput2, userStrInput3);
+
 
 
     }
