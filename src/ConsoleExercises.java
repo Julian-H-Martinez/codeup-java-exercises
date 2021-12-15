@@ -15,6 +15,7 @@ public class ConsoleExercises {
 //        System.out.printf("%s, %s \n", greeting, name);
         //  will pass variables in order they are passed/placed
 
+        //  Instantiating a SCANNER OBJECT
         //  declaring variable of type Scanner
         //  assigning it to a new Scanner OBJECT
         //  specified System.in --> source of the scanner --> referring to info user types into console
