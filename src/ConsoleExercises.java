@@ -39,6 +39,95 @@ public class ConsoleExercises {
         //  worth noting there are other methods that will return user input
         //  nextInt --> will return user input as an int
 
+        /** 1)  Copy this code into your main method: */
+        double pi = 3.14159;
+        //  per documentation, a newline should be passed like %n and not \n
+//        System.out.printf("The value of pi is approximately %s%n", pi);
+//        System.out.printf("The value of pi is approximately %.2f%n", pi);
+
+        /** Scanner 1)
+         * Prompt a user to enter an integer and store that value in an int variable using the nextInt method.
+         * What happens if you input something that is not an integer? --> Exception error is thrown
+         */
+        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter an Integer: ");
+//        int userInput = scanner.nextInt();
+//        System.out.printf("User input is: %s", userInput);
+
+        /** Scanner 2)
+         Prompt a user to enter 3 words, and store each of them in a separate variable.
+         Then, display them back in the console, each on a newline.
+
+         What happens if you enter less than 3 words? --> will not move to printing until 3rd word is entered
+         What happens if you enter more than 3 words? --> will only print first 3
+         */
+//        System.out.print("Enter 3 words");
+//        String userStrInput = scanner.next();
+//        String userStrInput2 = scanner.next();
+//        String userStrInput3 = scanner.next();
+//        System.out.printf("%s%n%s%n%s%n", userStrInput, userStrInput2, userStrInput3);
+
+        /** Scanner 3)
+         Prompt a user to enter a sentence, then store that sentence in a String variable using the next method.
+         Then, display that sentence back to the user.
+
+         do you capture all the words? --> only the first word prints out
+         */
+//        System.out.print("Enter a sentence: ");
+//        String userSentence = scanner.next();
+//        System.out.printf("Your sentence is: %n%s", userSentence);
+
+        /** Scanner 4
+         Rewrite the above example using the nextLine method.
+         */
+//        System.out.print("Enter a sentence: ");
+//        String userSentence = scanner.nextLine();
+//        System.out.printf("Your sentence is: %n%s", userSentence);
+
+
+        /** Calculate the perimeter and area of Codeup's classrooms. */
+        /**
+         * 1) Prompt the user to enter values of length and width of a classroom at Codeup (or your room if virtual).
+         * Use the nextLine method each time you need to get user input.
+         * In this case, we need it twice, once to get the user input for the length and again to get the user input for the width.
+         * Parse the resulting strings to a numeric type.
+         * Assume that the rooms are perfect rectangles.
+         * Assume that the user will enter valid numeric data for length and width.
+        */
+//        // Declarations
+//
+//        Scanner in = new Scanner(System.in);
+//        int length;
+//        int width;
+//        int area;
+//        int perimeter;
+//
+//        // Prompts
+//
+//        System.out.println("Enter length and width of a room: ");
+//
+//        // Read in values
+//
+//        length = in.nextInt();
+//        width = in.nextInt();
+//
+//        System.out.println("Here is what you entered: ");
+//        System.out.printf(" Length: %d%n Width: %d%n ", length, width);
+//
+//        /**
+//        * 2) Display the area and perimeter of that classroom.
+//        * The area of a rectangle is equal to the length times the width,
+//        * and the perimeter of a rectangle is equal to 2 times the length plus 2 times the width.
+//         */
+//        area = length * width;
+//        perimeter = (length * 2) + (width * 2);
+//        System.out.printf("Area: %d%n Perimeter: %d%n", area, perimeter);
+
+
+
+
+
+
 
     }
 }
