@@ -66,6 +66,18 @@ public class ConsoleExercises {
 //        String userStrInput3 = scanner.next();
 //        System.out.printf("%s%n%s%n%s%n", userStrInput, userStrInput2, userStrInput3);
 
+        /** Scanner 2)
+         Prompt a user to enter a sentence, then store that sentence in a String variable using the next method.
+         Then, display that sentence back to the user.
+
+         do you capture all the words? --> only the first word prints out
+         */
+//        System.out.print("Enter a sentence: ");
+//        String userSentence = scanner.next();
+//        String userSentence = scanner.nextLine();
+//        System.out.printf("Your sentence is: %n%s", userSentence);
+
+
 
 
     }
