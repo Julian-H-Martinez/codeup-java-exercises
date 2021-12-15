@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class ConsoleExercises {
     public static void main(String[] args){
 //        System.out.println("Yep I\'m working just fine!");
@@ -80,9 +79,9 @@ public class ConsoleExercises {
         /** Scanner 4
          Rewrite the above example using the nextLine method.
          */
-//        System.out.print("Enter a sentence: ");
-//        String userSentence = scanner.nextLine();
-//        System.out.printf("Your sentence is: %n%s", userSentence);
+        System.out.print("Enter a sentence: ");
+        String userSentence = scanner.nextLine();
+        System.out.printf("Your sentence is: %n%s%n", userSentence);
 
 
         /** Calculate the perimeter and area of Codeup's classrooms. */
@@ -94,35 +93,82 @@ public class ConsoleExercises {
          * Assume that the rooms are perfect rectangles.
          * Assume that the user will enter valid numeric data for length and width.
         */
-//        // Declarations
-//
+////        // Declarations
+////
 //        Scanner in = new Scanner(System.in);
+//        in.useDelimiter("\n");
 //        int length;
 //        int width;
 //        int area;
 //        int perimeter;
+////
+////        // Prompts
+////
+//        System.out.println("Enter length and width of a room: ");
+////
+////        // Read in values
+////
+//        length = in.nextInt();
+//        width = in.nextInt();
+////
+//        System.out.println("Here is what you entered: ");
+//        System.out.printf(" Length: %d%n Width: %d%n ", length, width);
+////
+////        /**
+////        * 2) Display the area and perimeter of that classroom.
+////        * The area of a rectangle is equal to the length times the width,
+////        * and the perimeter of a rectangle is equal to 2 times the length plus 2 times the width.
+////         */
+////        area = length * width;
+////        perimeter = (length * 2) + (width * 2);
+////        System.out.printf("Area: %d%n Perimeter: %d%n", area, perimeter);
+
+        /** BONUS BONUS BONUS
+         *  In your perimeter/area calculator:
+               - Accept decimal entries.
+               - Calculate the volume of the rooms in addition to the area and perimeter.
+
+         *  The Scanner class can be told specifically what characters or pattern separates tokens in a piece of input with the useDelimiter method.
+         *  Add the following line of code to your application after you have created a scanner
+              (assuming the variable holding the Scanner is named scanner): scanner.useDelimiter("\n");
+         *  How does this change the way your program operates?
+         *  Rewrite your classroom program to use nextInt method.
+         *  If you added the line of code above to your application, you should now have no trouble handling multiple pieces of user input.*/
+
+//        // Declarations
+//
+        Scanner in = new Scanner(System.in);
+//        in.useDelimiter("\n");
+        float length;
+        float width;
+        float height;
+        float area;
+        float perimeter;
+        float volume;
 //
 //        // Prompts
 //
-//        System.out.println("Enter length and width of a room: ");
+        System.out.println("Enter length, width, and height of a room: ");
 //
 //        // Read in values
 //
-//        length = in.nextInt();
-//        width = in.nextInt();
+
+        length = in.nextFloat();
+        width = in.nextFloat();
+        height = in.nextFloat();
 //
-//        System.out.println("Here is what you entered: ");
-//        System.out.printf(" Length: %d%n Width: %d%n ", length, width);
+        System.out.println("Here is what you entered: ");
+        System.out.printf(" Length: %.2f%n Width: %.2f%n Height: %.2f%n", length, width, height);
 //
 //        /**
 //        * 2) Display the area and perimeter of that classroom.
 //        * The area of a rectangle is equal to the length times the width,
 //        * and the perimeter of a rectangle is equal to 2 times the length plus 2 times the width.
 //         */
-//        area = length * width;
-//        perimeter = (length * 2) + (width * 2);
-//        System.out.printf("Area: %d%n Perimeter: %d%n", area, perimeter);
-
+        area = length * width;
+        perimeter = (length * 2) + (width * 2);
+        volume = area * height;
+        System.out.printf(" Area: %.2f%n Perimeter: %.2f%n Volume: %.2f%n", area, perimeter, volume);
 
 
 
