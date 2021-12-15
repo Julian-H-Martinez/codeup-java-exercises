@@ -66,7 +66,7 @@ public class ConsoleExercises {
 //        String userStrInput3 = scanner.next();
 //        System.out.printf("%s%n%s%n%s%n", userStrInput, userStrInput2, userStrInput3);
 
-        /** Scanner 2)
+        /** Scanner 3)
          Prompt a user to enter a sentence, then store that sentence in a String variable using the next method.
          Then, display that sentence back to the user.
 
@@ -74,8 +74,15 @@ public class ConsoleExercises {
          */
 //        System.out.print("Enter a sentence: ");
 //        String userSentence = scanner.next();
+//        System.out.printf("Your sentence is: %n%s", userSentence);
+
+        /** Scanner 4
+         Rewrite the above example using the nextLine method.
+         */
+//        System.out.print("Enter a sentence: ");
 //        String userSentence = scanner.nextLine();
 //        System.out.printf("Your sentence is: %n%s", userSentence);
+
 
 
 
