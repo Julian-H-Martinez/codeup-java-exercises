@@ -17,33 +17,60 @@ public class ControlFlowExercises {
         //  Do While
         //
         //  Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
-        int i = 0;
-        do{
-            if(i % 2 == 0){
-                System.out.println(i);
-            }
-            i++;
-        }while(i <= 100);
+//        int i = 0;
+//        do{
+//            if(i % 2 == 0){
+//                System.out.println(i);
+//            }
+//            i++;
+//        }while(i <= 100);
         //  Alter your loop to count backwards by 5's from 100 to -10.
-        int y = 100;
-        do{
-            if(y % 5 == 0){
-                System.out.println(i);
-            }
-            y--;
-        }while(y >= -10);
+//        int y = 100;
+//        do{
+//            if(y % 5 == 0){
+//                System.out.println(y);
+//            }
+//            y--;
+//        }while(y >= -10);
         //  Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000.
-        long x = 2;
-        do{
-            System.out.println(x);
-            x *= x;
-        }while(x < 1000000);
+//        long x = 2;
+//        do{
+//            System.out.println(x);
+//            x *= x;
+//        }while(x < 1000000);
         //  Output should equal:
         //  2
         //  4
         //  16
         //  256
         //  65536
+
+        //  For
+        //
+        //  Refactor the previous two exercises to use a for loop instead.
+
+        //  Create a loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
+//        for (int i = 0; i <= 100; i++){
+//            if(i % 2 == 0){
+//                System.out.println(i);
+//            }
+//        }
+        //  Alter your loop to count backwards by 5's from 100 to -10.
+//        for (int y = 100; y >= -10; y--){
+//            if(y % 5 == 0){
+//                System.out.println(y);
+//            }
+//        }
+        //  Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000.
+        //  Output should equal:
+        //  2
+        //  4
+        //  16
+        //  256
+        //  65536
+//        for (long x = 2; x < 1000000; x *= x){
+//            System.out.println(x);
+//        }
 
     }
 }
