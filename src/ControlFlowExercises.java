@@ -112,10 +112,10 @@ public class ControlFlowExercises {
         Scanner sc = new Scanner(System.in);
 //        sc.useDelimiter("%n");
         //  Prompt the user to enter an integer.
-        System.out.print("What number would you like to go up to? ");
-        int userInput = sc.nextInt();
-        System.out.print("Would you like to continue? [Y/N]");
-        String userChoice = sc.next();
+//        System.out.print("What number would you like to go up to? ");
+//        int userInput = sc.nextInt();
+//        System.out.print("Would you like to continue? [Y/N]");
+//        String userChoice = sc.next();
         //  Display a table of squares and cubes from 1 to the value entered.
         //  Ask if the user wants to continue.
         //  Assume that the user will enter valid data.
@@ -135,22 +135,70 @@ public class ControlFlowExercises {
         //  4      | 16      | 64
         //  5      | 25      | 125
 
-        if(userChoice.equalsIgnoreCase("y")){
-            System.out.println();
-            System.out.println("Here is your table!");
-            System.out.println("number | squared | cubed ");
-            System.out.println("------ | ------- | ----- ");
+//        if(userChoice.equalsIgnoreCase("y")){
+//            System.out.println();
+//            System.out.println("Here is your table!");
+//            System.out.println("number | squared | cubed ");
+//            System.out.println("------ | ------- | ----- ");
+//
+//            for(int x = 1; x <= userInput; x++){
+//                int num = x;
+//                int sq = x * x;
+//                int cube = x * x * x;
+//                System.out.printf("%-6d | %-7d | %-6d %n", num, sq, cube);
+//            }
+//        }else{
+//            System.out.println("Sorry to hear that, maybe next time!");
+//        }
 
-            for(int x = 1; x <= userInput; x++){
-                int num = x;
-                int sq = x * x;
-                int cube = x * x * x;
-                System.out.printf("%-6d | %-7d | %-6d %n", num, sq, cube);
+        /** 4) Convert given number grades into letter grades. */
+        //  Prompt the user for a numerical grade from 0 to 100.
+            //  Display the corresponding letter grade.
+            //  Prompt the user to continue.
+            //  Assume that the user will enter valid integers for the grades.
+            //  The application should only continue if the user agrees to.
+            //  Grade Ranges:
+            //
+                //  A : 100 - 88
+                //  B : 87 - 80
+                //  C : 79 - 67
+                //  D : 66 - 60
+                //  F : 59 - 0
+
+        System.out.print("Enter your numerical (1-100) grade: ");
+        int userGrade = sc.nextInt();
+        System.out.print("Would you like to continue? [Y/N]");
+        String userChoice = sc.next();
+
+        if(userChoice.equalsIgnoreCase("y")){
+            if(userGrade > 87 && userGrade < 101){
+                if(userGrade == 99 || userGrade == 100){
+                    System.out.println("Very NICE!!! You got an A+!!!");
+                }else{
+                    System.out.println("Nice your grade is an A!");
+                }
+            }else if(userGrade > 79 && userGrade < 88){
+                if(userGrade == 87){
+                    System.out.println("Almost there, nice B+!");
+                }else{
+                    System.out.println("Your grade is a B!");
+                }
+            }else if(userGrade > 66 && userGrade < 80){
+                if(userGrade == 66 || userGrade == 67){
+                    System.out.println("You're right there, good job on the C+!");
+                }else{
+                    System.out.println("You got a C");
+                }
+            }else if(userGrade > 59 && userGrade < 67){
+                System.out.println("You got a D");
+            }else if(userGrade > -1 && userGrade < 60){
+                System.out.println("F!");
+            }else{
+                System.err.println("Ummm let's not be silly here! Enter a valid whole number grade.");
             }
         }else{
-            System.out.println("Sorry to hear that, maybe next time!");
+            System.err.println("Completely understand, wouldn't want to continue with that grade either! LOL!!!");
         }
-
 
     }
 }
