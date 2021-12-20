@@ -49,34 +49,45 @@ public class ExtraExercises {
         //  The odd numbers are :1 3 5 7 9 11 13 15 17 19
         //  The Sum of odd Natural Number upto 10 terms : 100
 
-        System.out.println("Enter a number for terms: ");
-        int numChoice = sc.nextInt();
-        System.out.print("The odd numbers are:");
-        for(int x = 1; x <= numChoice*2; x++){
-            if(x % 2 == 0){
-                continue;
-            }else{
-                System.out.print(x + " ");
-            }
-        }
-//  Write a program in Java to display the pattern like right angle triangle with a number.
-//  Read the number using the Scanner class.
+//        System.out.println("Enter a number for terms: ");
+//        int numChoice = sc.nextInt();
+//        System.out.print("The odd numbers are:");
+//        for(int x = 1; x <= numChoice*2; x++){
+//            if(x % 2 == 0){
+//                continue;
+//            }else{
+//                System.out.print(x + " ");
+//            }
+//        }
+        //  Write a program in Java to display the pattern like right angle triangle with a number.
+        //  Read the number using the Scanner class.
+        //
+        //  The pattern like :
+            //  1
+            //  12
+            //  123
+            //  1234
+//        System.out.println("How many rows: ");
+//        int numRows = sc.nextInt();
+//        for(int y = 1; y <= numRows; y++){
+//            for(int z = 1; z <= y; z++){
+//                System.out.print(z + " ");
+//            }
+//            System.out.println();
+//        }
+
+        //  Write a program in Java to make such a pattern like right angle triangle with number increased by 1.
+        //
+        //  With an input of 10.
+        //  The pattern must look like :
+            //  1
+            //  2 3
+            //  4 5 6
+            //  7 8 9 10
+//        for(int i = 1; i <= 10; i++){
+//            for(int j = 1; j<=i; j++){
 //
-//  The pattern like :
-    //  1
-    //  12
-    //  123
-    //  1234
-
-
-
-//  Write a program in Java to make such a pattern like right angle triangle with number increased by 1.
-//
-//  With an input of 10.
-//  The pattern must look like :
-    //  1
-    //  2 3
-    //  4 5 6
-    //  7 8 9 10
+//            }
+//        }
     }
 }
