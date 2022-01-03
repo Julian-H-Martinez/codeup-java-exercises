@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Bob {
     public static void main(String[] args){
 //        System.out.println("Yep I work!");
@@ -12,5 +14,34 @@ public class Bob {
          * He answers 'Whatever.' to anything else.
          * Write the Java code necessary so that a user of your command line application can have a conversation with Bob.
          */
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Start a conversation with Bob. What would you like to ask/tell Bob?");
+        String userResponse1 = sc.nextLine();
+        //  Bob's responses
+        if(userResponse1.contains("?")){
+            System.out.println("Sure.");
+            System.out.println("What about you?");
+            String userResponse2 = sc.nextLine();
+            if(userResponse2.contains("?")){
+                System.out.println("Sure");
+            }else if(userResponse2.contains("!")){
+                System.out.println("Whoa, chill out!");
+            }else if(userResponse2.equals("")){
+                System.out.println("Fine. Be that way!");
+            }else{
+                System.out.println("Whatever.");
+            }
+        }else if(userResponse1.contains("!")){
+            System.out.println("Whoa, chill out!");
+            System.out.println("Why are you so excited?");
+            String userResponse3 = sc.nextLine();
+            if(userResponse3.contains(".")){
+                System.out.println("That's cool just simmer down.");
+            }
+        }else if(userResponse1.equals("")){
+            System.out.println("Fine. Be that way!");
+        }else{
+            System.out.println("Whatever.");
+        }
     }
 }
