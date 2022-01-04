@@ -48,13 +48,13 @@ Hint: recursion might be helpful here!
         System.out.println("Pick a number between 1 and 10: ");
         int userInput = sc.nextInt();
         if(userInput < min){
-            System.out.println("That's below the range; please select between 1 and 10.");
+            System.out.println("You chose " + userInput + "\nThat's below the range");
         }else if(userInput > max){
-            System.out.println("That's above the range; please select between 1 and 10.");
+            System.out.println("You chose " + userInput + "\nThat's above the range");
         }else{
+            System.out.println("You chose " + userInput);
             return userInput;
         }
-        System.out.println("You chose " + userInput);
         return getInteger(min, max);
     }
     public static void main(String[] args) {
@@ -65,7 +65,7 @@ Hint: recursion might be helpful here!
 //        System.out.println(division(23, 5));              //  should be 4
 //        System.out.println(division(23, 0));              //  anything divided by 0 is undefined causing a runtime error
 //        System.out.println(remainder(23, 5));             //  should be 3
-//        getInteger(1, 10);
+        getInteger(1, 10);
 
     }
 }
