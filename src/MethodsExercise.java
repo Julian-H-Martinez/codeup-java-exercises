@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class MethodsExercise {
 
+    public static Scanner sc = new Scanner(System.in);
+
     /*
     Problem 1
      */
@@ -36,21 +38,8 @@ public class MethodsExercise {
 
     /*
     Problem 2
-    Create a method that validates that user input is in a certain range
-
-    The method signature should look like this:
-
-    public static int getInteger(int min, int max);
-    and is used like this:
-
-    System.out.print("Enter a number between 1 and 10: ");
-    int userInput = getInteger(1, 10);
-    If the input is invalid, prompt the user again.
-
-    Hint: recursion might be helpful here!
     */
-    public static int getInteger(int min, int max){
-        Scanner sc = new Scanner(System.in);
+    public static long getInteger(int min, int max){
         System.out.println("Pick a number between 1 and 10: ");
         int userInput = sc.nextInt();
         if(userInput < min){
@@ -58,7 +47,7 @@ public class MethodsExercise {
         }else if(userInput > max){
             System.out.println("You chose " + userInput + "\nThat's above the range");
         }else{
-            System.out.println("You chose " + userInput);
+//            System.out.println("You chose " + userInput);
             return userInput;
         }
         return getInteger(min, max);
@@ -66,34 +55,53 @@ public class MethodsExercise {
     /*
     Problem 3
     Assistance Cited: https://www.javatpoint.com/factorial-program-in-java
+
+    still need to work on this one; it's completed but needs to be clean.
      */
     static long factorial(int num){
         if(num == 0){
             return 1;
         }else{
-            return (num * factorial(num-1));
+            long result = num * factorial(num-1);
+            System.out.println(num + "! = " + result );
+            return result;
         }
     }
-    public static long getFactorial(int min, int max){
-        Scanner sc = new Scanner(System.in);
+    public static long getInteger(int min, int max, int userNum){
         System.out.println("Pick an integer between 1 and 39: ");
-        int userNum = sc.nextInt();
+        userNum = sc.nextInt();
+        factorial(userNum);
         System.out.println("Would you like to continue? [Y/N]");
         String userContinue = sc.next().toLowerCase(Locale.ROOT);
         if(userContinue.equals("y")){
-            if(userNum < min){
-                System.out.println("You chose " + userNum + "\nThat's below the range");
-            }else if(userNum > max){
-                System.out.println("You chose " + userNum + "\nThat's above the range");
-            }else{
-                System.out.println(factorial(userNum));
-                return factorial(userNum);
-            }
+            System.out.println("Pick an integer between 1 and 39: ");
+            userNum = sc.nextInt();
+            factorial(userNum);
         }else{
             System.out.println("Maybe next time.");
         }
             return userNum;
     }
+
+//    public static long getFactorial(int min, int max){
+//        System.out.println("Pick an integer between 1 and 39: ");
+//        int userNum = sc.nextInt();
+//        System.out.println("Would you like to continue? [Y/N]");
+//        String userContinue = sc.next().toLowerCase(Locale.ROOT);
+//        if(userContinue.equals("y")){
+//            if(userNum < min){
+//                System.out.println("You chose " + userNum + "\nThat's below the range");
+//            }else if(userNum > max){
+//                System.out.println("You chose " + userNum + "\nThat's above the range");
+//            }else{
+//                System.out.println(factorial(userNum));
+//                return factorial(userNum);
+//            }
+//        }else{
+//            System.out.println("Maybe next time.");
+//        }
+//        return userNum;
+//    }
 
     /*
     Create an application that simulates dice rolling.
@@ -106,6 +114,9 @@ public class MethodsExercise {
     Use static methods to implement the method(s) that generate the random numbers.
     Use the .random method of the java.lang.Math class to generate random numbers.
      */
+//    static int randomDice1(int num){
+//        return num;
+//    }
 
 
     public static void main(String[] args) {
@@ -119,6 +130,8 @@ public class MethodsExercise {
 //        getInteger(1, 10);
 //        getFactorial(1, 39);
 //        System.out.println(factorial(5));
+//        factorial(5);
+        getInteger(1, 39, 1);
 
     }
 }
