@@ -57,16 +57,21 @@ Hint: recursion might be helpful here!
         }
         return getInteger(min, max);
     }
-    public static int userNum(int num){
+    public static long getFactorial(int min, int max){
         Scanner sc = new Scanner(System.in);
         System.out.println("Pick an integer between 1 and 10: ");
-
-        return num;
+        int userNum = sc.nextInt();
+        int fact = 1;
+        for (int i = 1; i <= userNum; i++){
+            fact = fact*i;
+            System.out.printf("%d! = %d * %d = %d%n", userNum, fact, i, fact);
+        }
+        System.out.println(fact);
+        return fact;
     }
     /*
     Calculate the factorial of a number.
 
-    Prompt the user to enter an integer from 1 to 10.
     Display the factorial of the number entered by the user.
     Ask if the user wants to continue.
     Use a for loop to calculate the factorial.
@@ -83,7 +88,9 @@ Hint: recursion might be helpful here!
     4! = 1 x 2 x 3 x 4   = 24
     Bonus
 
-    Test the application and find the integer for the highest factorial that can be accurately calculated by this application, then modify the prompt so that it prompts the user for a number "from 1 to {the highest integer that returns accurate factorial calculation}". Don’t forget to change your verification too!
+    Test the application and find the integer for the highest factorial that can be accurately calculated by this application, then modify the
+    prompt so that it prompts the user for a number "from 1 to {the highest integer that returns accurate factorial calculation}". Don’t forget to
+    change your verification too!
     Use recursion to implement the factorial.
      */
     public static void main(String[] args) {
@@ -95,6 +102,7 @@ Hint: recursion might be helpful here!
 //        System.out.println(division(23, 0));              //  anything divided by 0 is undefined causing a runtime error
 //        System.out.println(remainder(23, 5));             //  should be 3
 //        getInteger(1, 10);
+        getFactorial(1, 10);
 
     }
 }
