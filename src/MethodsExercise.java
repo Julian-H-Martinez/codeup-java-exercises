@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class MethodsExercise {
@@ -59,33 +60,31 @@ Hint: recursion might be helpful here!
     }
     public static long getFactorial(int min, int max){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Pick an integer between 1 and 10: ");
+        System.out.println("Pick an integer between 1 and 39: ");
         int userNum = sc.nextInt();
-        int fact = 1;
-        for (int i = 1; i <= userNum; i++){
-            fact = fact*i;
-            System.out.printf("%d! = %d * %d = %d%n", userNum, fact, i, fact);
+        System.out.println("Would you like to continue? [Y/N]");
+        String userContinue = sc.next().toLowerCase(Locale.ROOT);
+        if(userContinue.equals("y")){
+            if(userNum < min){
+                System.out.println("You chose " + userNum + "\nThat's below the range");
+            }else if(userNum > max){
+                System.out.println("You chose " + userNum + "\nThat's above the range");
+            }else{
+                long fact = 1;
+                for (int i = 1; i <= userNum; i++){
+                    fact = fact*i;
+                }
+                System.out.println(fact);
+                return fact;
+            }
+        }else{
+            System.out.println("Maybe next time.");
         }
-        System.out.println(fact);
-        return fact;
+            return userNum;
     }
     /*
     Calculate the factorial of a number.
 
-    Display the factorial of the number entered by the user.
-    Ask if the user wants to continue.
-    Use a for loop to calculate the factorial.
-    Assume that the user will enter an integer, but verify it’s between 1 and 10.
-    Use the long type to store the factorial.
-    Continue only if the user agrees to.
-    A factorial is a number multiplied by each of the numbers before it.
-    Factorials are denoted by the exclamation point (n!). Ex:
-
-
-    1! = 1               = 1
-    2! = 1 x 2           = 2
-    3! = 1 x 2 x 3       = 6
-    4! = 1 x 2 x 3 x 4   = 24
     Bonus
 
     Test the application and find the integer for the highest factorial that can be accurately calculated by this application, then modify the
@@ -102,7 +101,7 @@ Hint: recursion might be helpful here!
 //        System.out.println(division(23, 0));              //  anything divided by 0 is undefined causing a runtime error
 //        System.out.println(remainder(23, 5));             //  should be 3
 //        getInteger(1, 10);
-        getFactorial(1, 10);
+        getFactorial(1, 39);
 
     }
 }
