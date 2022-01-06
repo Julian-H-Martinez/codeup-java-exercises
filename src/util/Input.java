@@ -42,6 +42,15 @@ public class Input {
             return false;
         }
     }
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        this.userString = scanner.nextLine();
+        if(userString.equalsIgnoreCase("y") || userString.equalsIgnoreCase("yes")){
+            return yesNo("Would you like to continue?");
+        }else{
+            return false;
+        }
+    }
 
     public int getInt(int min, int max){
         this.userInt = scanner.nextInt();
@@ -112,6 +121,7 @@ public static class InputTest{
 //        System.out.println("Enter a decimal : ");
 //        user1.getDouble(0, 1);
 //        System.out.println(user1.getDouble());
+//        user1.yesNo("Would you like to continue?");
     }
 }
 }
