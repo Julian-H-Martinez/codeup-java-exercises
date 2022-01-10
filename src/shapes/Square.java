@@ -1,38 +1,34 @@
 package shapes;
 /*
-In the Square class, override the getArea and getPerimeter methods with the following definitions for a square
-perimeter = 4 x side
-area = side ^ 2
-
- */
-public class Square extends Rectangle{
-//    protected double side;
-//
-//    public double getSide() {
-//        return side;
-//    }
-//
-//    public void setSide(double side) {
-//        this.side = side;
-//    }
-
-    public Square(){
-        System.out.println("Creating a square");
+Change your existing Square class to extend Quadrilateral.
+Because the length of all sides of a square are the same,
+the methods for setting the length and the width should set both protected properties.
+*/
+public class Square extends Quadrilateral{
+    @Override
+    public double getPerimeter() {
+        return (2*this.length)+(2*this.width);
     }
-    public Square(double side){
+
+    @Override
+    public double getArea() {
+        return this.length*this.width;
+    }
+
+    @Override
+    protected double setLength() {
+        return 0;
+    }
+
+    @Override
+    protected double setWidth() {
+        return 0;
+    }
+
+    public Square() {
+    }
+
+    public Square(double side) {
         super(side, side);
     }
-
-    public double getArea(){
-//        super.getArea();
-        System.out.println("I'm overriding: " + Math.pow(super.length, 2));
-        return Math.pow(super.length, 2);
-    }
-
-    public double getPerimeter(){
-        super.getPerimeter();
-        return Math.pow(super.length, 2);
-    }
-
-
 }

@@ -1,48 +1,27 @@
 package shapes;
-/*
-Shapes
+/* Change your existing Rectangle class to inherit from Quadrilateral and implement Measurable. */
+public class Rectangle extends Quadrilateral implements Measurable{
+    @Override
+    public double setLength() {
+        return 0;
+    }
 
+    @Override
+    public double setWidth() {
+        return 0;
+    }
 
-Re-run your ShapesTest class. How can you determine which getArea and getPerimeter methods are being called on each object?
- */
-public class Rectangle {
-    /* FIELDS */
-    protected double length;
-    protected double width;
-
-    /* CONSTRUCTOR(S) */
+    public double getArea(){
+        return this.length*this.width;
+    }
+    public double getPerimeter(){
+        return (2*this.width) + (2*this.length);
+    }
 
     public Rectangle() {
     }
-    public Rectangle(double length, double width){
-        this.length = length;
-        this.width = width;
-    }
 
-    /* GETTERS/SETTERS */
-    public double getLength() {
-        return length;
+    public Rectangle(double length, double width) {
+        super(length, width);
     }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    /* METHODS */
-    public double getArea(){
-        return this.length * this.width;
-    }
-
-    public double getPerimeter(){
-        return (this.length * 2) + (this.width * 2);
-    }
-
 }
