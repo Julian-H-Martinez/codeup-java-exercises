@@ -6,7 +6,7 @@ area = side ^ 2
 
  */
 public class Square extends Rectangle{
-    protected double side;
+//    protected double side;
 //
 //    public double getSide() {
 //        return side;
@@ -25,13 +25,13 @@ public class Square extends Rectangle{
 
     public double getArea(){
 //        super.getArea();
-        System.out.println("I'm overriding: " + Math.pow(this.side, 2));
-        return Math.pow(this.side, 2);
+        System.out.println("I'm overriding: " + Math.pow(super.length, 2));
+        return Math.pow(super.length, 2);
     }
 
     public double getPerimeter(){
         super.getPerimeter();
-        return Math.pow(side, 2);
+        return Math.pow(super.length, 2);
     }
 
 
