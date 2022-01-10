@@ -2,20 +2,20 @@ package shapes;
 /* Change your existing Rectangle class to inherit from Quadrilateral and implement Measurable. */
 public class Rectangle extends Quadrilateral implements Measurable{
     @Override
-    public double setLength() {
-        return 0;
+    public void setLength(double length){
+        this.length = length;
     }
 
     @Override
-    public double setWidth() {
-        return 0;
+    public void setWidth(double width){
+        this.width = width;
     }
 
     public double getArea(){
-        return this.length*this.width;
+        return length*width;
     }
     public double getPerimeter(){
-        return (2*this.width) + (2*this.length);
+        return (2*width) + (2*length);
     }
 
     public Rectangle() {
