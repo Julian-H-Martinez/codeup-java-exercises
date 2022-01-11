@@ -3,19 +3,9 @@ package grades;
 import java.util.ArrayList;
 
 /*
-
-
-The student class should have a constructor that sets name property, and initializes the grades property as an empty ArrayList.
-The Student class should have the following methods:
-
-
-// returns the average of the students grades
-// public double getGradeAverage();
 Test your Student class by adding a main method and creating Student objects.
 Verify that you can add grades to each object, and
 that your getGradeAverage method correctly returns the average of the student's grades.
-
-
  */
 public class Student {
     //  FIELDS  //
