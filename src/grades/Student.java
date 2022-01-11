@@ -57,4 +57,16 @@ public class Student {
         System.out.println(sum);
     }
 
+    public static void main(String[] args) {
+        ArrayList<Integer> grades = new ArrayList<>();
+        ArrayList<Integer> grades2 = new ArrayList<>();
+        ArrayList<Integer> grades3 = new ArrayList<>();
+        Student s1 = new Student("bob", grades);
+        s1.addGrade(99);
+        s1.addGrade(89);
+        s1.addGrade(70);
+        System.out.printf("%n%s average is %.2f", s1.getName(), s1.getGradeAverage());
+    }
+
+
 }
