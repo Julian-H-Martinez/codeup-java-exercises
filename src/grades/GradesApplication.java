@@ -41,15 +41,22 @@ public class GradesApplication {
         System.out.println(students);
 
         //  ask the user which student they would like to see more information about.
-//        System.out.println("Which student would you like to see info on?");
+        System.out.println("Which student would you like to see info on?");
         String selected = studentSelect.getString("Enter name of student you would like more info on.");
 
         if(students.containsKey(selected)){
             System.out.println("You've selected to see user: " + students.get(selected).getName());
             System.out.println(students.get(selected).getName());
-            System.out.println(students.get(selected));
+            System.out.println(students.get(selected).getGrades());
+            if(studentSelect.yesNo("Would you like to view another student?")){
+                System.out.println("You've selected to see user: " + students.get(selected).getName());
+                System.out.println(students.get(selected).getName());
+                System.out.println(students.get(selected).getGrades());
+            }
         }else{
             System.out.println("Sorry but no users with that spelling was found");
+            studentSelect.yesNo("Would you like to view another student?");
+
         }
 
 
