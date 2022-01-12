@@ -1,19 +1,13 @@
 package grades;
-/*
-Create a map for students and GitHub usernames
 
-Inside the main method, create a HashMap named students.
-It should have keys that are strings that represent github usernames, and values that are Student objects.
-Create at least 4 Student objects with at least 3 grades each, and add them to the map.
-
-Be creative! Make up GitHub usernames and grades for your student objects.
- */
+import util.Input;
 
 import java.util.HashMap;
 
 public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
+        Input studentSelect = new Input();
 
         Student s1 = new Student("willie");
         Student s2 = new Student("hank");
@@ -43,6 +37,33 @@ public class GradesApplication {
         students.put(s3.getName(), s3);
         students.put(s4.getName(), s4);
 
+        //  Print the list of GitHub usernames out to the console
         System.out.println(students);
+
+        //  ask the user which student they would like to see more information about.
+//        System.out.println("Which student would you like to see info on?");
+        String selected = studentSelect.getString("Enter name of student you would like more info on.");
+
+        if(students.containsKey(selected)){
+            System.out.println("You've selected to see user: " + students.get(selected).getName());
+            System.out.println(students.get(selected).getName());
+            System.out.println(students.get(selected));
+        }else{
+            System.out.println("Sorry but no users with that spelling was found");
+        }
+
+
     }
 }
+/*
+Create the command line interface
+
+The user should enter a GitHub username (i.e. one of the keys in your map).
+If the given input does not match up with a key in your map, tell the user that no users with that username were found.
+If the given username does exist, display information about that student, including their name and their grades.
+
+After the information is displayed, the application should ask the user if they want to continue, and
+keep running so long as the answer is yes.
+
+
+ */

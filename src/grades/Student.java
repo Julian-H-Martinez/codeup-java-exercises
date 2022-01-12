@@ -66,6 +66,7 @@ public class Student {
         s1.addGrade(89);
         s1.addGrade(70);
         System.out.printf("%n%s average is %.2f", s1.getName(), s1.getGradeAverage());
+        System.out.println(s1.grades);
     }
 
 
