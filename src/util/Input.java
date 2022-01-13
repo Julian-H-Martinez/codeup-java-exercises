@@ -11,21 +11,18 @@ public class Input {
 
 //  CONSTRUCTOR(S)
 
-    public Input(){
+    public Input() {
         this.scanner = new Scanner(System.in).useDelimiter("\n");
 //        this.userInt = scanner.nextInt();
     }
 
-//  METHOD(S)
-    public String getString(){
+    //  METHOD(S)
+    public String getString() {
         this.userString = scanner.nextLine();
-
-//        System.out.println(userString);
         return this.userString;
     }
 
-    /*BONUS: added String parameter to message user first*/
-    public String getString(String prompt){
+    public String getString(String prompt) {
         System.out.println(prompt);
         this.userString = scanner.nextLine();
 
@@ -33,83 +30,91 @@ public class Input {
         return this.userString;
     }
 
-    /*The yesNo method should return true if the user enters y, yes, or variants thereof, and false otherwise.*/
-    public boolean yesNo(){
+    public boolean yesNo() {
         this.userString = scanner.nextLine();
-        if(userString.equalsIgnoreCase("y") || userString.equalsIgnoreCase("yes")){
+        if (userString.equalsIgnoreCase("y") || userString.equalsIgnoreCase("yes")) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
-    public boolean yesNo(String prompt){
+
+    public boolean yesNo(String prompt) {
         System.out.println(prompt);
         this.userString = scanner.nextLine();
-        if(userString.equalsIgnoreCase("y") || userString.equalsIgnoreCase("yes")){
+        if (userString.equalsIgnoreCase("y") || userString.equalsIgnoreCase("yes")) {
             return yesNo("Would you like to continue?");
-        }else{
+        } else {
             return false;
         }
     }
 
-    public int getInt(int min, int max){
-        String s = getString();
-        if(Integer.valueOf(s) < min || Integer.valueOf(s) > max){
-            System.out.printf("Number should be between %d-%d: ", min, max);
-            return getInt(min, max);
-        }else{
-            return Integer.valueOf(s);
-        }
+    public int getInt() {
+        return userInt;
     }
 
-    /*BONUS: added String parameter to message user first*/
-    public int getInt(int min, int max, String prompt){
+//    public int getInt(String prompt) {
+//        return userInt;
+//    }
+
+    public int getInt(int min, int max) {
+        String s = getString("Choose a number.");
+        try{
+            Integer.valueOf(s);
+            if (Integer.valueOf(s) < min || Integer.valueOf(s) > max) {
+                System.out.printf("Number should be between %d-%d: ", min, max);
+                return getInt(min, max);
+            }
+        }catch(Exception e){
+//            e = new Exception("Only numbers please. We can't parse silliness");
+            System.err.println("Numbers only please.");
+            return getInt(min, max);
+        }
+        return Integer.valueOf(s);
+    }
+
+    public int getInt(int min, int max, String prompt) {
         System.out.println(prompt);
         this.userInt = scanner.nextInt();
-        if(userInt < min || userInt > max){
+        if (userInt < min || userInt > max) {
             System.out.printf("Number should be between %d-%d: ", min, max);
             return getInt(min, max);
-        }else{
+        } else {
             return userInt;
         }
     }
 
-    public int getInt(){
-        return userInt;
+    public double getDouble() {
+        return userDouble;
     }
 
-    public double getDouble(int min, int max){
+    public double getDouble(int min, int max) {
         String d = getString();
-        if(Double.valueOf(d) <= min || Double.valueOf(d) >= max){
+        if (Double.valueOf(d) <= min || Double.valueOf(d) >= max) {
             System.out.printf("Enter a decimal between %d - %d: ", min, max);
             return getDouble(min, max);
-        }else{
+        } else {
             return Double.valueOf(d);
         }
     }
 
-    /*BONUS: added String parameter to message user first*/
-    public double getDouble(int min, int max, String prompt){
+    public double getDouble(int min, int max, String prompt) {
         System.out.println(prompt);
         this.userDouble = scanner.nextDouble();
-        if(userDouble <= min || userDouble >= max){
+        if (userDouble <= min || userDouble >= max) {
             System.out.printf("Enter a decimal between %d - %d: ", min, max);
             return getDouble(min, max);
-        }else{
+        } else {
             return userDouble;
         }
     }
 
-    public double getDouble(){
-        return userDouble;
-    }
+    public static class InputTest {
+        public static void main(String[] args) throws Exception {
 
-public static class InputTest{
-    public static void main(String[] args) {
-
-        Input user1 = new Input();
-        System.out.println("Enter a number");
-        System.out.println(user1.getInt(3, 10));
+            Input user1 = new Input();
+//        System.out.println("Enter a number");
+            user1.getInt(3, 10);
 //        System.out.println("Enter a string: ");
 //        System.out.println(user1.getString());
 //        user1.getString("What's your favorite quote? ");
@@ -123,6 +128,6 @@ public static class InputTest{
 //        user1.getDouble(0, 1);
 //        System.out.println(user1.getDouble());
 //        user1.yesNo("Would you like to continue?");
+        }
     }
-}
 }
