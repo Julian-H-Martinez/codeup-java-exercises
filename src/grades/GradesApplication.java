@@ -38,9 +38,21 @@ public class GradesApplication {
         students.put(s4.getName(), s4);
 
         //  Print the list of GitHub usernames out to the console
-        System.out.println(students);
+        //  .keySet() provides just the keys of your HashMap
+        System.out.println(students.keySet());
 
         //  ask the user which student they would like to see more information about.
+        //  wrapping in a do/while loop
+        /*
+        do{
+            System.out.println("Which student would you like to see info on?");
+            String selected = studentSelect.getString("Enter name of student you would like more info on.");
+            if(students.containsKey(selected)){
+                System.out.println("Username: " + students.get(selected).getName()
+                students.get(selected).getGrades()
+            }
+        }while();
+         */
         System.out.println("Which student would you like to see info on?");
         String selected = studentSelect.getString("Enter name of student you would like more info on.");
 
