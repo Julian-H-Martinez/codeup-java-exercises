@@ -45,7 +45,12 @@ public class GradesApplication {
         //  wrapping in a do/while loop
         /*
         do{
-
+            System.out.println("Which student would you like to see info on?");
+            String selected = studentSelect.getString("Enter name of student you would like more info on.");
+            if(students.containsKey(selected)){
+                System.out.println("Username: " + students.get(selected).getName()
+                students.get(selected).getGrades()
+            }
         }while();
          */
         System.out.println("Which student would you like to see info on?");
