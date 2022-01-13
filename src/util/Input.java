@@ -20,7 +20,7 @@ public class Input {
     public String getString(){
         this.userString = scanner.nextLine();
 
-        System.out.println(userString);
+//        System.out.println(userString);
         return this.userString;
     }
 
@@ -53,12 +53,12 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        this.userInt = scanner.nextInt();
-        if(userInt < min || userInt > max){
+        String s = getString();
+        if(Integer.valueOf(s) < min || Integer.valueOf(s) > max){
             System.out.printf("Number should be between %d-%d: ", min, max);
             return getInt(min, max);
         }else{
-            return userInt;
+            return Integer.valueOf(s);
         }
     }
 
@@ -79,12 +79,12 @@ public class Input {
     }
 
     public double getDouble(int min, int max){
-        this.userDouble = scanner.nextDouble();
-        if(userDouble <= min || userDouble >= max){
+        String d = getString();
+        if(Double.valueOf(d) <= min || Double.valueOf(d) >= max){
             System.out.printf("Enter a decimal between %d - %d: ", min, max);
             return getDouble(min, max);
         }else{
-            return userDouble;
+            return Double.valueOf(d);
         }
     }
 
@@ -108,7 +108,8 @@ public static class InputTest{
     public static void main(String[] args) {
 
         Input user1 = new Input();
-//        System.out.println(user1.getInt());
+        System.out.println("Enter a number");
+        System.out.println(user1.getInt(3, 10));
 //        System.out.println("Enter a string: ");
 //        System.out.println(user1.getString());
 //        user1.getString("What's your favorite quote? ");
