@@ -145,7 +145,7 @@ public class Input {
 //        System.out.println(user1.getDouble());
 //        user1.yesNo("Would you like to continue?");
 //            user1.getBinary();
-            user1.getHex();
+//            user1.getHex();
         }
     }
 }
