@@ -60,8 +60,8 @@ public class Input {
     public int getInt(int min, int max) {
         String s = getString("Choose a number.");
         try{
-            Integer.valueOf(s);
-            if (Integer.valueOf(s) < min || Integer.valueOf(s) > max) {
+            int userNum = Integer.valueOf(s);
+            if (userNum < min || userNum > max) {
                 System.out.printf("Number should be between %d-%d: ", min, max);
                 return getInt(min, max);
             }
@@ -84,18 +84,34 @@ public class Input {
         }
     }
 
+//    public int getBinary(){
+//        String s = getString("Enter a binary number: ");
+//        int userBinary = Integer.valueOf(s, 2);
+//        return userBinary;
+//    }
+//
+//    public int getHex(){
+//        String s = getString("Enter a hex number: ");
+//        return Integer.valueOf(s, 16);
+//    }
+
     public double getDouble() {
         return userDouble;
     }
 
     public double getDouble(int min, int max) {
-        String d = getString();
-        if (Double.valueOf(d) <= min || Double.valueOf(d) >= max) {
-            System.out.printf("Enter a decimal between %d - %d: ", min, max);
+        String d = getString("Choose a decimal: ");
+        try{
+            Double.valueOf(d);
+            if (Double.valueOf(d) <= min || Double.valueOf(d) >= max) {
+                System.out.printf("Enter a decimal between %d - %d: ", min, max);
+                return getDouble(min, max);
+            }
+        }catch (Exception e){
+            System.err.println("Decimal only please.");
             return getDouble(min, max);
-        } else {
-            return Double.valueOf(d);
         }
+        return Double.valueOf(d);
     }
 
     public double getDouble(int min, int max, String prompt) {
@@ -114,7 +130,7 @@ public class Input {
 
             Input user1 = new Input();
 //        System.out.println("Enter a number");
-            user1.getInt(3, 10);
+//            user1.getInt(3, 10);
 //        System.out.println("Enter a string: ");
 //        System.out.println(user1.getString());
 //        user1.getString("What's your favorite quote? ");
@@ -128,6 +144,8 @@ public class Input {
 //        user1.getDouble(0, 1);
 //        System.out.println(user1.getDouble());
 //        user1.yesNo("Would you like to continue?");
+//            user1.getBinary();
+            user1.getHex();
         }
     }
 }
