@@ -8,30 +8,34 @@ public class MethodsExercises {
     /*
     Problem 1
      */
-    public static int addition(int num, int num2){
+    public static int addition(int num, int num2) {
         return num + num2;
     }
-    public static int subtraction(int num, int num2){
+
+    public static int subtraction(int num, int num2) {
         return num - num2;
     }
-    public static int multiplication(int num, int num2){
+
+    public static int multiplication(int num, int num2) {
         int total = 0;
         int i = 1;
-        do{
+        do {
             total += num;
             i++;
-        }while(i <= num2);
+        } while (i <= num2);
         return total;
     }
-//    public static int multiplication(int num, int num2){
+
+    //    public static int multiplication(int num, int num2){
 //        int total = 0;
 //            total += num;
 //        return multiplication(total, num2);
 //    }
-    public static int division(int num, int num2){
-        return num/num2;
+    public static int division(int num, int num2) {
+        return num / num2;
     }
-    public static int remainder(int num, int num2){
+
+    public static int remainder(int num, int num2) {
         return num % num2;
     }
 
@@ -39,48 +43,50 @@ public class MethodsExercises {
     /*
     Problem 2
     */
-    public static long getInteger(int min, int max){
+    public static long getInteger(int min, int max) {
         System.out.println("Pick a number between 1 and 10: ");
         int userInput = sc.nextInt();
-        if(userInput < min){
+        if (userInput < min) {
             System.out.println("You chose " + userInput + "\nThat's below the range");
-        }else if(userInput > max){
+        } else if (userInput > max) {
             System.out.println("You chose " + userInput + "\nThat's above the range");
-        }else{
+        } else {
 //            System.out.println("You chose " + userInput);
             return userInput;
         }
         return getInteger(min, max);
     }
+
     /*
     Problem 3
     Assistance Cited: https://www.javatpoint.com/factorial-program-in-java
 
     still need to work on this one; it's completed but needs to be clean.
      */
-    static long factorial(int num){
-        if(num == 0){
+    static long factorial(int num) {
+        if (num == 0) {
             return 1;
-        }else{
-            long result = num * factorial(num-1);
-            System.out.println(num + "! = " + result );
+        } else {
+            long result = num * factorial(num - 1);
+            System.out.println(num + "! = " + result);
             return result;
         }
     }
-    public static long getInteger(int min, int max, int userNum){
+
+    public static long getInteger(int min, int max, int userNum) {
         System.out.println("Pick an integer between 1 and 39: ");
         userNum = sc.nextInt();
         factorial(userNum);
         System.out.println("Would you like to continue? [Y/N]");
         String userContinue = sc.next().toLowerCase(Locale.ROOT);
-        if(userContinue.equals("y")){
+        if (userContinue.equals("y")) {
             System.out.println("Pick an integer between 1 and 39: ");
             userNum = sc.nextInt();
             factorial(userNum);
-        }else{
+        } else {
             System.out.println("Maybe next time.");
         }
-            return userNum;
+        return userNum;
     }
 
 //    public static long getFactorial(int min, int max){
@@ -119,6 +125,43 @@ public class MethodsExercises {
 //    }
 
 
+    /*
+    Game Development 101
+
+    Welcome to the world of game development!
+
+    You are going to build a high-low guessing game. Create a class named HighLow inside of src.
+
+    The specs for the game are:
+
+    Game picks a random number between 1 and 100.
+    Prompts user to guess the number.
+    All user inputs are validated.
+    If user's guess is less than the number, it outputs "HIGHER".
+    If user's guess is more than the number, it outputs "LOWER".
+    If a user guesses the number, the game should declare "GOOD GUESS!"
+    Hints
+
+    Use the random method of the java.lang.Math class to generate a random number.
+     */
+    public static int randomNum = (int) Math.floor((Math.random() * 25) + 1);
+
+    public static void highLow() {
+//        System.out.println(randomNum);
+        Scanner sc = new Scanner(System.in).useDelimiter("\n");
+        System.out.println("Guess what number I'm thinking of: ");
+        int userSelect = sc.nextInt();
+        if (userSelect > randomNum) {
+            System.out.println("LOWER");
+            highLow();
+        } else if (userSelect < randomNum) {
+            System.out.println("HIGHER");
+            highLow();
+        } else {
+            System.out.println("GOOD GUESS!");
+        }
+    }
+
     public static void main(String[] args) {
 //        System.out.println("Yep I work");
 //        System.out.println(addition(4, 5));               //  should be 9
@@ -131,7 +174,8 @@ public class MethodsExercises {
 //        getFactorial(1, 39);
 //        System.out.println(factorial(5));
 //        factorial(5);
-        getInteger(1, 39, 1);
+//        getInteger(1, 39, 1);
+        highLow();
 
     }
 }
